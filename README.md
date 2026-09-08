@@ -1,89 +1,89 @@
 # Student Score Predictor
 
+This is a machine learning project that predicts a student's exam score based on different academic and personal factors.
+
+I built this project to practice the complete machine learning process, from exploring the data to building a model and creating a simple web application.
+
 ## About the Project
 
-I made this project to predict a student's exam score using different factors related to their studies and daily routine.
+The project uses student information such as:
 
-For example, the dataset has information about how many hours a student studies, their attendance, previous scores, sleep hours, tutoring sessions, motivation level, and a few other factors.
-
-I wanted to see how Machine Learning can use this kind of information to predict a student's exam score.
-
-## Dataset
-
-I used a student performance dataset containing information about **6,607 students**.
-
-The dataset has **20 columns**, including:
-
-- Hours Studied
+- Hours studied
 - Attendance
-- Previous Scores
-- Sleep Hours
-- Tutoring Sessions
-- Motivation Level
-- Parental Involvement
-- Access to Resources
-- Internet Access
-- Family Income
-- Teacher Quality
-- Physical Activity
-- School Type
-- Gender
-- and some other student-related information
+- Previous scores
+- Tutoring sessions
+- Sleep hours
+- Motivation level
+- Parental involvement
+- Access to resources
+- And other student-related factors
 
-The score I am trying to predict is:
-
-`Exam_Score`
+The model uses these details to predict the expected exam score.
 
 ## What I Did
 
-I started by loading the dataset using Pandas and checking the data to understand what was inside it.
+In this project, I worked on:
 
-Then I:
+- Loading and exploring the dataset
+- Checking missing values
+- Exploratory Data Analysis (EDA)
+- Creating graphs to understand the data
+- Feature engineering
+- Comparing Linear Regression and Random Forest
+- Evaluating the models using MAE, MSE and R²
+- Hyperparameter tuning for Random Forest
+- Checking feature importance
+- Saving the trained model
+- Creating a Streamlit web application for predictions
 
-- Checked the columns and dataset size.
-- Checked for missing values.
-- Cleaned the data.
-- Separated the features and the exam score.
-- Converted the categorical data into numerical form using One-Hot Encoding.
-- Split the data into training and testing sets.
-- Trained a Random Forest Regressor.
-- Used the trained model to predict exam scores.
-- Checked the model's performance using MAE, MSE and R² Score.
+## Model Results
 
-## Model
+I compared two machine learning models.
 
-For the current version, I used **Random Forest Regressor**.
+| Model | MAE | MSE | R² Score |
+|---|---:|---:|---:|
+| Linear Regression | 0.45 | 3.25 | 0.77 |
+| Random Forest | 1.07 | 4.70 | 0.67 |
 
-I chose Random Forest because the dataset contains different types of information, including both numbers and categories.
+Linear Regression performed better on the test data, so I used it as the final model for the prediction application.
 
-## Results
+## Web Application
 
-The current model gave me these results:
+The project also includes a simple Streamlit application.
 
-- **MAE:** 1.09
-- **MSE:** 4.67
-- **R² Score:** 0.67
+Users can enter student details and get a predicted exam score.
 
-The model is giving reasonably good predictions, but I still want to improve it and compare it with other models.
-
-## Tools I Used
+## Tools Used
 
 - Python
 - Pandas
-- NumPy
 - Scikit-learn
 - Matplotlib
-- Seaborn
+- Streamlit
+- Joblib
 
 ## Project Files
 
-```text
-StudentScorePredictor/
-│
-├── StudentPerformanceFactors.csv
-├── main.py
-├── download_dataset.py
-├── requirements.txt
-├── README.md
-├── .gitignore
-└── .gitattributes
+- `main.py` - data analysis, model training and evaluation
+- `app.py` - Streamlit web application
+- `StudentPerformanceFactors.csv` - dataset
+- `student_score_model.pkl` - saved trained model
+- `requirements.txt` - required Python packages
+
+## How to Run
+
+Install the required packages:
+
+    pip install -r requirements.txt
+
+Run the web application:
+
+    streamlit run app.py
+
+## What I Learned
+
+This project helped me understand the basic machine learning workflow and how a trained model can be connected to a simple web application.
+
+## Future Improvements
+
+I would like to improve the user interface, test the model with more data, and improve the overall prediction system in the future.
