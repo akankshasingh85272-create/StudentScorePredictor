@@ -30,9 +30,9 @@ build/
 # Logs
 *.log
 
-# Model files
-*.pkl
-*.joblib
+# Trained models
+# *.pkl
+# *.joblib
 
 # Kaggle cache
 .kaggle/
