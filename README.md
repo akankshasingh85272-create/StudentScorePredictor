@@ -87,3 +87,10 @@ This project helped me understand the basic machine learning workflow and how a 
 ## Future Improvements
 
 I would like to improve the user interface, test the model with more data, and improve the overall prediction system in the future.
+
+## Live Demo
+
+You can try the Student Score Predictor here:
+
+[Open the Live App] (https://studentscorepredictor-gye8lappejh4jsfcoqsynsr.streamlit.app/)
+
